@@ -2,9 +2,9 @@
 
 namespace ClassToTest;
 
-class ClassToTest
+class WordManager
 {
-    public function sayHello(): string
+    public function getHello(): string
     {
         return "Hello";
     }

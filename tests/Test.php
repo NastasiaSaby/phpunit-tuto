@@ -2,15 +2,16 @@
 
 namespace Tests;
 
-use ClassToTest\ClassToTest;
+use ClassToTest\SpeakManager;
 
+use ClassToTest\WordManager;
 use PHPUnit\Framework\TestCase;
 
 class Test extends TestCase
 {
     public function testShouldSayHello(): void
     {
-        $classToTest = new ClassToTest();
+        $classToTest = new SpeakManager(new WordManager());
         $this->assertEquals("Hello", $classToTest->sayHello());
     }
 }
