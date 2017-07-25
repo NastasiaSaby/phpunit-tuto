@@ -30,6 +30,7 @@ class Test extends TestCase
         $classToTest = new SpeakManager(new WordManager());
 
         $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Je suis une exception");
 
         $classToTest->throwException();
     }
