@@ -4,8 +4,8 @@ namespace ClassToTest;
 
 class WordManager
 {
-    public function getHello(): string
+    public function getNumber(): string
     {
-        return "Hello";
+        return rand(1, 100);
     }
 }

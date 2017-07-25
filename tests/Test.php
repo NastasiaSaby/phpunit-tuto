@@ -12,6 +12,6 @@ class Test extends TestCase
     public function testShouldSayHello(): void
     {
         $classToTest = new SpeakManager(new WordManager());
-        $this->assertEquals("Hello", $classToTest->sayHello());
+        $this->assertEquals("Hello", $classToTest->sayNumber());
     }
 }

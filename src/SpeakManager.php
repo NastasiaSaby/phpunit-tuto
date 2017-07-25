@@ -11,8 +11,8 @@ class SpeakManager
         $this->wordManager = $wordManager;
     }
 
-    public function sayHello(): string
+    public function sayNumber(): string
     {
-        return $this->wordManager->getHello();
+        return $this->wordManager->getNumber();
     }
 }
