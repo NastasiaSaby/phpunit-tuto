@@ -1,8 +1,10 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+namespace Tests;
 
-include('ClassToTest.php');
+use ClassToTest\ClassToTest;
+
+use PHPUnit\Framework\TestCase;
 
 class Test extends TestCase
 {
