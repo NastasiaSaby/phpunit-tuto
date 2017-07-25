@@ -11,15 +11,13 @@ class Test extends TestCase
 {
     public function testShouldSayHello(): void
     {
-        $classToTest = new SpeakManager(new WordManagerSon());
-        $this->assertEquals("15", $classToTest->sayNumber());
-    }
-}
+        $wordManagerMock = $this->createMock(WordManager::class);
 
-class WordManagerSon extends WordManager
-{
-    public function getNumber(): string
-    {
-        return "15";
+        // Configure the mock.
+        $wordManagerMock->method('getNumber')
+            ->willReturn('15');
+
+        $classToTest = new SpeakManager($wordManagerMock);
+        $this->assertEquals("15", $classToTest->sayNumber());
     }
 }
