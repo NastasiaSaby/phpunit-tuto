@@ -11,7 +11,15 @@ class Test extends TestCase
 {
     public function testShouldSayHello(): void
     {
-        $classToTest = new SpeakManager(new WordManager());
-        $this->assertEquals("Hello", $classToTest->sayNumber());
+        $classToTest = new SpeakManager(new WordManagerSon());
+        $this->assertEquals("15", $classToTest->sayNumber());
+    }
+}
+
+class WordManagerSon extends WordManager
+{
+    public function getNumber(): string
+    {
+        return "15";
     }
 }
