@@ -24,4 +24,13 @@ class Test extends TestCase
         $classToTest = new SpeakManager($wordManagerMock);
         $this->assertEquals("15", $classToTest->sayNumber());
     }
+
+    public function testShouldThrowAnException(): void
+    {
+        $classToTest = new SpeakManager(new WordManager());
+
+        $this->expectException(\Exception::class);
+
+        $classToTest->throwException();
+    }
 }

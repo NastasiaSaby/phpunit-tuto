@@ -15,4 +15,9 @@ class SpeakManager
     {
         return $this->wordManager->getNumber();
     }
+
+    public function throwException()
+    {
+        throw new \Exception('Je suis une exception');
+    }
 }
