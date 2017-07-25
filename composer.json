@@ -6,7 +6,9 @@
             "email": "nastasia.saby@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "doctrine/annotations": "^1.5"
+    },
     "autoload": {
         "classmap": [
             "src/"

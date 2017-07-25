@@ -25,7 +25,10 @@ class Test extends TestCase
         $this->assertEquals("15", $classToTest->sayNumber());
     }
 
-    public function testShouldThrowAnException(): void
+    /**
+     * @test
+     */
+    public function shouldThrowAnException(): void
     {
         $classToTest = new SpeakManager(new WordManager());
 
