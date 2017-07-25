@@ -17,6 +17,10 @@ class Test extends TestCase
         $wordManagerMock->method('getNumber')
             ->will($this->returnCallback(function () {return 15;}));
 
+        //Test if the mock method is called
+        $wordManagerMock->expects($this->once())
+            ->method('getNumber');
+
         $classToTest = new SpeakManager($wordManagerMock);
         $this->assertEquals("15", $classToTest->sayNumber());
     }
