@@ -2,10 +2,13 @@
 
 use PHPUnit\Framework\TestCase;
 
+include('ClassToTest.php');
+
 class Test extends TestCase
 {
     public function testShouldSayHello(): void
     {
-        $this->assertEquals(1, 1);
+        $classToTest = new ClassToTest();
+        $this->assertEquals("Hello", $classToTest->sayHello());
     }
 }
