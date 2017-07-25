@@ -1,0 +1,10 @@
+{
+    "name": "nastasia/tests",
+    "authors": [
+        {
+            "name": "Nastasia",
+            "email": "nastasia.saby@gmail.com"
+        }
+    ],
+    "require": {}
+}
